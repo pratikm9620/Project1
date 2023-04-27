@@ -1,0 +1,478 @@
+Grid
+
+import 'package:flutter/material.dart';
+import 'package:footstar/leagues/bundesliga.dart';
+import 'package:footstar/leagues/eredivise.dart';
+import 'package:footstar/leagues/laliga.dart';
+import 'package:footstar/leagues/ligaportugal.dart';
+import 'package:footstar/leagues/ligue1.dart';
+import 'package:footstar/leagues/mls.dart';
+import 'package:footstar/leagues/premierleague.dart';
+import 'package:footstar/leagues/seriaa.dart';
+import 'package:footstar/pltable.dart';
+// import 'package:footstar/pltable.dart';
+void main() {
+runApp(const MyApp());
+}
+class MyApp extends StatelessWidget {
+const MyApp({super.key});
+IT DEPARTMENT SIES GST MAD&PWA LAB
+// This widget is the root of your application.
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+title: 'Flutter Demo',
+theme: ThemeData(
+// This is the theme of your application.
+//
+// Try running your application with "flutter run". You'll see the
+// application has a blue toolbar. Then, without quitting the app, try
+// changing the primarySwatch below to Colors.green and then invoke
+// "hot reload" (press "r" in the console where you ran "flutter run",
+// or simply save your changes to "hot reload" in a Flutter IDE).
+// Notice that the counter didn't reset back to zero; the application
+// is not restarted.
+primarySwatch: Colors.blue,
+),
+home: const MyHomePage(title: 'Flutter Demo Home Page'),
+debugShowCheckedModeBanner: false,
+);
+}
+}
+class MyHomePage extends StatelessWidget {
+const MyHomePage({super.key, required String title});
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(title: Text("FootStar",)),
+body: Container(
+child: GridView(
+gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+crossAxisCount: 2, crossAxisSpacing: 8),
+children: [
+InkWell(
+onTap: () {
+Navigator.push(context,
+MaterialPageRoute(builder: (context) => premierleague()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(25.0),
+child: Image.network(
+'https://a1.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F5
+00%2F23.png',
+),
+),
+),
+),
+InkWell(
+onTap: () {
+IT DEPARTMENT Navigator.push( SIES GST MAD&PWA LAB
+context, MaterialPageRoute(builder: (context) => laliga()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/LaLiga_lo
+go_%28stacked%29.svg/1200px-LaLiga_logo_%28stacked%29.svg.png'),
+),
+),
+),
+InkWell(
+onTap: () {
+Navigator.push(
+context, MaterialPageRoute(builder: (context) => seriaa()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Serie_A_l
+ogo_2022.svg/800px-Serie_A_logo_2022.svg.png'),
+),
+),
+),
+InkWell(
+onTap: () {
+Navigator.push(context,
+MaterialPageRoute(builder: (context) => bundesliga()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Bundesliga_log
+o_%282017%29.svg/1200px-Bundesliga_logo_%282017%29.svg.png'),
+),
+),
+),
+InkWell(
+onTap: () {
+Navigator.push(
+context, MaterialPageRoute(builder: (context) => ligue1()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/commons/4/49/Ligue1_Uber_Eat
+s_logo.png'),
+),
+),
+IT DEPARTMENT), SIES GST MAD&PWA LAB
+InkWell(
+onTap: () {
+Navigator.push(context,
+MaterialPageRoute(builder: (context) => ligaportugal()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/commons/5/5a/S%C3%ADmbolo_da
+_Liga_Portuguesa_de_Futebol_Profissional.png'),
+),
+),
+),
+InkWell(
+onTap: () {
+Navigator.push(context,
+MaterialPageRoute(builder: (context) => eredivise()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://a3.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2
+F500%2F11.png'),
+),
+),
+),
+InkWell(
+onTap: () {
+Navigator.push(
+context, MaterialPageRoute(builder: (context) => mls()));
+},
+child: Container(
+child: Padding(
+padding: const EdgeInsets.all(30.0),
+child: Image.network(
+'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/MLS_crest
+_logo_RGB_gradient.svg/1200px-MLS_crest_logo_RGB_gradient.svg.png'),
+),
+),
+),
+],
+),
+),
+);
+}
+}
+
+List view
+
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
+class premierleague extends StatefulWidget {
+const premierleague({super.key});
+@override
+State<premierleague> createState() => _premierleagueState();
+}
+class _premierleagueState extends State<premierleague> {
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+debugShowCheckedModeBanner: false,
+home: Scaffold(
+appBar: AppBar(
+title: Text("Premier league Standings"),
+backgroundColor: Color.fromARGB(255, 70, 31, 107)),
+body: ListView(
+children: [
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Arsenal 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("Elephant on the Top Pts."),
+leading: Text(
+'1.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://www.arsenal.com/themes/custom/arsenal_main/images/arsenalcrest.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Colors.red,
+IT DEPARTMENT), SIES GST MAD&PWA LAB
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Manchester City 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle:
+Text("Oil Club Pts."),
+leading: Text(
+"2.",
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_Cit
+y_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 19, 196, 250),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"New Castle 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("UnderRatted Pts."),
+leading: Text(
+"3.",
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/hif/2/25/Newcastle_United_Lo
+go.png",
+IT DEPARTMENT fit: BoxFit.coverSIES ), GST MAD&PWA LAB
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 51, 51, 51),
+textColor: Color.fromARGB(255, 240, 240, 240),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Manchester United 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("Red Devils Pts."),
+leading: Text(
+"4.",
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_Uni
+ted_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Colors.red,
+// textColor: Colors.white,
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Tottenham 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("Trophyless Pts."),
+leading: Text(
+'5.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+IT DEPARTMENT maxHeight: 64, SIES GST MAD&PWA LAB
+),
+child: Image.network(
+"https://assets.stickpng.com/images/580b57fcd9996e24bc43c4ee.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 218, 218, 218),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Brighton 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("New Club Pts."),
+leading: Text(
+'6.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_H
+ove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 0, 125, 209),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Fulham 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("New Club Pts."),
+leading: Text(
+'7.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+IT DEPARTMENT minHeight: 44, SIES GST MAD&PWA LAB
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://seeklogo.com/images/F/fulham-fc-logo-EBBC39136Aseeklogo.com.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 255, 130, 130),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Brentford 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("New Club Pts."),
+leading: Text(
+'8.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://brandlogovector.com/wp-content/uploads/2021/10/BrentfordFC-Logo.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 226, 72, 45),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Liverpool 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("New Club Pts."),
+leading: Text(
+'9.',
+style: TextStyle(fontSize: 30),
+),
+IT DEPARTMENT trailing: ConstrainedBoxSIES ( GST MAD&PWA LAB
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.s
+vg/1200px-Liverpool_FC.svg.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 0, 163, 101),
+),
+),
+Padding(
+padding: const EdgeInsets.all(8.0),
+child: ListTile(
+title: Text(
+"Chelsea 50",
+style: TextStyle(fontWeight: FontWeight.bold),
+),
+subtitle: Text("New Club Pts."),
+leading: Text(
+'10.',
+style: TextStyle(fontSize: 30),
+),
+trailing: ConstrainedBox(
+constraints: BoxConstraints(
+minWidth: 44,
+minHeight: 44,
+maxWidth: 64,
+maxHeight: 64,
+),
+child: Image.network(
+"https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg
+/1200px-Chelsea_FC.svg.png",
+fit: BoxFit.cover),
+),
+onTap: () {},
+tileColor: Color.fromARGB(255, 42, 107, 206),
+),
+),
+],
+),
+),
+);
+}
+}
